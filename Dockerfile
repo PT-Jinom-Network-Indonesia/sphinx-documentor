@@ -30,4 +30,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt update \
     && apt-get remove --auto-remove software-properties-common -y\
     && apt-get purge --auto-remove software-properties-common -y \
     && apt-get autoclean \
-    && apt-get autoremove
+    && apt-get autoremove \
+    && pip3 install six \
+    && pip3 install requests

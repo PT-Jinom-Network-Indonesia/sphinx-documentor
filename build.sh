@@ -7,7 +7,9 @@ if [ -d "$DIRECTORY" ] ; then
         doxyphp2sphinx App
         make html
         cd /
-        rm -R /project/$(cat /ACTIVE_DIRECTORY)/storage/local-docs/*
+        cd /project/$(cat /ACTIVE_DIRECTORY)/storage/local-docs/
+        rm -R *
+        cd /
         mv /project/$(cat /ACTIVE_DIRECTORY)/supports/_build/html/* /project/$(cat /ACTIVE_DIRECTORY)/storage/local-docs/
     else
         echo "Sphinx not installed, please run doc-init to install Sphinx to project"
