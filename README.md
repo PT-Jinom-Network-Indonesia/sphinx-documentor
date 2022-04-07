@@ -12,10 +12,10 @@ Cara instalasi :
     ```
 - Jalankan perintah docker-run berikut untuk membuat container
     ```
-    docker run --name {NamaContainer} --mount src="{lokasi_kumpulan_project}",dst=/project,type=bind -it hendrapgpyph/sphinx-php-documentation /bin/bash
+    docker run --name {NamaContainer} --mount src="{Lokasi_kumpulan_project}",dst=/project,type=bind -it hendrapgpyph/sphinx-php-documentation /bin/bash
     ```
-    >NamaContainer : isi dengan nama container yang kamu inginkan \
-    lokasi_kumpulan_project : isi dengan folder yang berisi kumpulan project kamu. contoh : /Applications/XAMPP/xamppfiles/htdocs
+    >**NamaContainer** : isi dengan nama container yang kamu inginkan \
+    **Lokasi_kumpulan_project** : isi dengan folder yang berisi kumpulan project kamu. contoh : /Applications/XAMPP/xamppfiles/htdocs
 -   Container berhasil di buat
  
 # Getting started
@@ -67,7 +67,7 @@ Menjalankan Container :
 
 -   Dokumentasi berhasil di install, anda dapat membuka hasil dokumentasi dengan menjalankan route : /documentation
 
-# Command
+# Commands
 -   Generate dokumentasi
     ```
     doc-generate  
