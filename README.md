@@ -68,18 +68,17 @@ Menjalankan Container :
 -   Dokumentasi berhasil di install, anda dapat membuka hasil dokumentasi dengan menjalankan route : /documentation
 
 # Commands
--   Generate dokumentasi
+-   Memilih/ganti project
     ```
-    doc-generate  
+    doc-select
     ```
-    
 -   Menginstall dokumentasi pada project
     ```
     doc-init
     ```
--   Memilih/ganti project
+-   Generate dokumentasi
     ```
-    doc-select
+    doc-generate  
     ```
 -   Menampilkan project yang sedang aktif / dipilih
     ```
