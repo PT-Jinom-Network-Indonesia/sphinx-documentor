@@ -6,13 +6,13 @@ Yang perlu di siapkan untuk menginstall sphinx-php-documentation adalah :
 -   [Docker](https://docs.docker.com/get-docker/)
 
 Cara instalasi :
-- Pull image sphinx-php-documentation
+- Pull image sphinx-documentor
     ```
-    docker pull hendrapgpyph/sphinx-php-documentation
+    docker pull jinomdev/sphinx-php-documentation
     ```
 - Jalankan perintah docker-run berikut untuk membuat container
     ```
-    docker run --name {NamaContainer} --mount src="{Lokasi_kumpulan_project}",dst=/project,type=bind -it hendrapgpyph/sphinx-php-documentation /bin/bash
+    docker run --name {NamaContainer} --mount src="{Lokasi_kumpulan_project}",dst=/project,type=bind -it jinomdev/sphinx-php-documentation /bin/bash
     ```
     >**NamaContainer** : isi dengan nama container yang kamu inginkan \
     **Lokasi_kumpulan_project** : isi dengan folder yang berisi kumpulan project kamu. contoh : /Applications/XAMPP/xamppfiles/htdocs

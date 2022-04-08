@@ -6,7 +6,7 @@ echo "$DOCUMENTATION_LANGUAGE" > /DOCUMENTATION_LANGUAGE
 
 REPOSITORY_DOCUMENTATION=https://github.com/PT-Jinom-Network-Indonesia/javascript-documentation.git
 
-if [[ DOCUMENTATION_LANGUAGE == "php" ]]; then
+if [[ $DOCUMENTATION_LANGUAGE == "php" ]]; then
     REPOSITORY_DOCUMENTATION=https://github.com/hendrapgpyph/support-documentation.git
 fi
 
