@@ -1,14 +1,12 @@
 FROM ubuntu:20.04
 
 LABEL MAINTAINER="Hendra <hendrapgpyph@gmail.com>" 
-COPY build.sh /sphinx-docker-file/
-COPY init.sh /sphinx-docker-file/
-COPY show_active_directory.sh /sphinx-docker-file/
-COPY change_directory.sh /sphinx-docker-file/
+COPY bash/* /sphinx-docker-file/
 RUN DEBIAN_FRONTEND=noninteractive apt update \
-    && DEBIAN_FRONTEND=noninteractive apt install -y software-properties-common \
+    && DEBIAN_FRONTEND=noninteractive apt install -y software-properties-common curl\
     && add-apt-repository ppa:deadsnakes/ppa -y \
-    && DEBIAN_FRONTEND=noninteractive apt install -y python3.8 python3-pip curl git doxygen nano \
+    && curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
+    && DEBIAN_FRONTEND=noninteractive apt install -y python3.8 python3-pip git doxygen nano nodejs \
     && curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py \
     && python3 get-pip.py \
     && pip3 install -U sphinx \

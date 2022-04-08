@@ -35,7 +35,7 @@ Menjalankan Container :
     ```
     doc-select
     ```
-    Dan masukkan nama direktori project yang kamu tuju
+    Dan masukkan nama direktori project yang kamu tuju dan bahasa pemrogramannya
 -   Jalankan perintah doc-init untuk menginstall sphinx documentation ke dalam projectmu
     ```
     doc-init
@@ -44,8 +44,10 @@ Menjalankan Container :
     ```
     doc-generate
     ```
+
+## PHP
 -   Buka folder project laravelmu, pada bagian routes/web.php tambahkan code berikut :
-    ```
+    ```php
     Route::get('/documentation', function(){
         return redirect()->to('/documentation/contents.html');
     });
@@ -65,7 +67,7 @@ Menjalankan Container :
     })->where('url', '(.*)')->middleware("auth");
     ```
 -   Tambahkan pada file **config/filesystems.php** pada bagian **disks** dengan code sebagai berikut :
-    ```
+    ```php
     'disks' => [
         ...
        
@@ -77,6 +79,41 @@ Menjalankan Container :
     ],
     ```
 -   Dokumentasi berhasil di install, anda dapat membuka hasil dokumentasi dengan menjalankan route : /documentation
+
+
+## Javascript
+Untuk Dokumentasi javascript kamu perlu menambahkan dockblock seperti berikut pada setiap file / module
+
+```javascript
+/**
+ * Module helloworld
+ * @module helloworld
+ */
+
+/**
+ * Say hello
+ * @param {string} name name
+ * @memberof helloworld
+ */
+function say_hello(name = "") {
+    console.log(`Hello, ${name}`);
+}
+```
+
+Selanjutnya sesuaikan kembali source project javascriptnya pada file `jsdoc.json` 
+
+```javascript
+{
+  ...
+  "source": {
+    "include": [
+      "../src" // source dimana tempat file javascript yang akan didokumentasikan
+    ]
+  }
+  ...
+}
+
+```
 
 # Commands
 -   Memilih/ganti project
@@ -95,3 +132,5 @@ Menjalankan Container :
     ```
     doc-show
     ```
+
+
