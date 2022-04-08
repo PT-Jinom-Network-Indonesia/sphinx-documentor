@@ -64,7 +64,18 @@ Menjalankan Container :
 
     })->where('url', '(.*)')->middleware("auth");
     ```
+-   Tambahkan pada file **config/filesystems.php** pada bagian **disks** dengan code sebagai berikut :
+    ```
+    'disks' => [
+        ...
+       
+        'local-docs' => [
+            'driver' => 'local',
+            'root' => storage_path('local-docs'),
+        ],
 
+    ],
+    ```
 -   Dokumentasi berhasil di install, anda dapat membuka hasil dokumentasi dengan menjalankan route : /documentation
 
 # Commands
