@@ -1,5 +1,5 @@
-# Tentang sphinx-php-documentation
-Sphinx php documentation merupakan sebuah tools untuk generate dokumentasi php. Tools ini dibuat dengan menggunakan docker dan telah dibuatkan docker image untuk memudahkan dalam proses instalasi.
+# Tentang sphinx-documentor
+Sphinx documentor merupakan sebuah tools untuk generate dokumentasi php dan javascript. Tools ini dibuat dengan menggunakan docker dan telah dibuatkan docker image untuk memudahkan dalam proses instalasi.
 
 # Instalasi
 Yang perlu di siapkan untuk menginstall sphinx-php-documentation adalah :
