@@ -4,6 +4,13 @@ if test -f "$FILE"; then
 else
     read -p "Enter Project Name : " ACTIVE_PROJECT_INPUT
     git clone https://github.com/hendrapgpyph/support-documentation.git /project/$(cat /ACTIVE_DIRECTORY)/supports
+    DIRECTORY=/project/$(cat /ACTIVE_DIRECTORY)/storage/local-docs
+    if [ -d "$DIRECTORY" ] ; then
+        echo "Adding local-docs"
+    else
+        mkdir /project/$(cat /ACTIVE_DIRECTORY)/storage/local-docs
+        echo "Adding local-docs"
+    fi
     cd /project/$(cat /ACTIVE_DIRECTORY)/supports
     filename=/project/$(cat /ACTIVE_DIRECTORY)/supports/conf.py
     sed -i "s/project-name-documentation/$ACTIVE_PROJECT_INPUT/" $filename
